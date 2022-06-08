@@ -1,0 +1,53 @@
+<form [formGroup]="formGroup" (submit)="onSubmit()">
+  <table>
+    <ng-container formGroupName="item">
+      <tr>
+        <td>
+          <label for="text">Text: </label>
+        </td>
+        <td>
+          <input type="text" formControlName="text" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="color">Color: </label>
+        </td>
+        <td>
+          <select id="color" formControlName="color">
+            <option *ngFor="let color of Colors">
+              {{ color }}
+            </option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="size">Size: </label>
+        </td>
+        <td>
+          <select id="size" formGroupName="item" formControlName="size">
+            <option *ngFor="let size of Sizes">
+              {{ size }}
+            </option>
+          </select>
+        </td>
+      </tr>
+    </ng-container>
+    <tr>
+      <td>
+        <label for="quanity">Qty: </label>
+      </td>
+      <td>
+        <input
+          id="quantity"
+          type="number"
+          min="1"
+          max="10"
+          formControlName="quantity"
+        />
+      </td>
+    </tr>
+  </table>
+  <button type="submit">Add to Cart</button>
+</form>

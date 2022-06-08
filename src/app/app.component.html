@@ -1,0 +1,10 @@
+<section>
+  <h1>Add Item 👕</h1>
+  <app-shirt
+    (addShirtToCartRequested)="onAddShirtToCartRequested($event)"
+  ></app-shirt>
+</section>
+<section>
+  <h1>Cart 🛒</h1>
+  <app-cart [items]="items"></app-cart>
+</section>
