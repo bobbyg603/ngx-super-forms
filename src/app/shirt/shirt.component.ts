@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Item } from '../cart/item';
-import { ControlsOf } from '../controls-of';
+import { ControlsOf } from './controls-of';
 import { Shirt, Color, Size } from './shirt';
 
 @Component({
